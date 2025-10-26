@@ -1,0 +1,19 @@
+{
+  "description": "Historical calibration data from completed projects",
+  "version": "1.0.0",
+  "last_updated": null,
+  "projects": [],
+  "global_adjustments": {
+    "language_migration": 1.0,
+    "architecture_refactor": 1.0,
+    "dependency_update": 1.0,
+    "framework_migration": 1.0
+  },
+  "statistics": {
+    "total_projects": 0,
+    "average_token_accuracy": null,
+    "average_effort_accuracy": null,
+    "confidence_level": "low"
+  },
+  "notes": "This file will be populated as projects are completed and calibrated. Use /estimate-modernization --calibrate to add project data."
+}

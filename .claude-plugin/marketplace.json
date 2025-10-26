@@ -1,0 +1,13 @@
+{
+"name": "robot-whisperers",
+"owner": {
+"name": "Michael Stricklen"
+},
+"plugins": [
+{
+  "name": "proven-practices",
+  "source": "./proven-practices",
+  "description": "Claude skills providing proven software development practices"
+}
+]
+}

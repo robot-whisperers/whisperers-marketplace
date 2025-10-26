@@ -1,0 +1,181 @@
+{
+  "description": "Framework and architecture complexity multipliers",
+  "version": "1.0.0",
+  "modernization_types": {
+    "language_migration": {
+      "base_multiplier": 1.2,
+      "description": "Converting code from one language to another"
+    },
+    "architecture_refactor": {
+      "base_multiplier": 1.8,
+      "description": "Restructuring application architecture (e.g., monolith to microservices)"
+    },
+    "dependency_update": {
+      "base_multiplier": 1.0,
+      "description": "Upgrading frameworks, libraries, build tools"
+    },
+    "framework_migration": {
+      "base_multiplier": 1.5,
+      "description": "Moving from one framework to another in same language"
+    }
+  },
+  "architecture_complexity": {
+    "simple": {
+      "multiplier": 0.8,
+      "examples": ["scripts", "cli tools", "utilities"],
+      "description": "Single-tier, minimal dependencies"
+    },
+    "moderate": {
+      "multiplier": 1.0,
+      "examples": ["mvc web apps", "rest apis", "standard spa"],
+      "description": "Standard multi-tier architecture"
+    },
+    "complex": {
+      "multiplier": 1.5,
+      "examples": ["microservices", "event-driven", "distributed systems"],
+      "description": "Multiple services, async communication, state management"
+    },
+    "very_complex": {
+      "multiplier": 1.8,
+      "examples": ["large-scale distributed", "real-time systems", "embedded systems"],
+      "description": "High concurrency, performance constraints, complex integrations"
+    }
+  },
+  "technical_debt_factors": {
+    "test_coverage": {
+      "high": {
+        "range": "80-100%",
+        "multiplier": 0.9,
+        "description": "Well-tested, changes can be validated easily"
+      },
+      "medium": {
+        "range": "40-79%",
+        "multiplier": 1.0,
+        "description": "Adequate coverage, some manual validation needed"
+      },
+      "low": {
+        "range": "0-39%",
+        "multiplier": 1.3,
+        "description": "Poor coverage, significant manual testing required"
+      }
+    },
+    "code_quality": {
+      "high": {
+        "indicators": ["low complexity", "good separation of concerns", "documented"],
+        "multiplier": 0.9
+      },
+      "medium": {
+        "indicators": ["moderate complexity", "some coupling", "partial documentation"],
+        "multiplier": 1.0
+      },
+      "low": {
+        "indicators": ["high complexity", "tight coupling", "undocumented"],
+        "multiplier": 1.4
+      }
+    },
+    "duplication": {
+      "low": {
+        "range": "0-10%",
+        "multiplier": 1.0
+      },
+      "medium": {
+        "range": "11-25%",
+        "multiplier": 1.1
+      },
+      "high": {
+        "range": "26%+",
+        "multiplier": 1.3
+      }
+    }
+  },
+  "frameworks": {
+    "python": {
+      "django_1x_to_4x": {
+        "difficulty": 1.6,
+        "breaking_changes": ["middleware", "url patterns", "template context", "settings"]
+      },
+      "django_within_major": {
+        "difficulty": 1.1,
+        "breaking_changes": ["minor API changes"]
+      },
+      "flask_to_fastapi": {
+        "difficulty": 1.4,
+        "breaking_changes": ["async patterns", "type hints", "dependency injection"]
+      }
+    },
+    "javascript": {
+      "webpack_4_to_5": {
+        "difficulty": 1.2,
+        "breaking_changes": ["configuration", "plugins", "loaders"]
+      },
+      "react_class_to_hooks": {
+        "difficulty": 1.3,
+        "breaking_changes": ["lifecycle methods", "state management", "context"]
+      },
+      "angular_to_react": {
+        "difficulty": 1.8,
+        "breaking_changes": ["complete paradigm shift"]
+      },
+      "nextjs_12_to_14": {
+        "difficulty": 1.3,
+        "breaking_changes": ["app router", "server components", "metadata"]
+      }
+    },
+    "java": {
+      "spring_boot_2_to_3": {
+        "difficulty": 1.3,
+        "breaking_changes": ["javax to jakarta", "security changes", "actuator"]
+      },
+      "junit_4_to_5": {
+        "difficulty": 1.1,
+        "breaking_changes": ["annotations", "assertions"]
+      }
+    },
+    "ruby": {
+      "rails_5_to_7": {
+        "difficulty": 1.4,
+        "breaking_changes": ["webpacker", "zeitwerk", "multiple databases"]
+      }
+    }
+  },
+  "agent_architecture_overhead": {
+    "single": {
+      "multiplier": 1.0,
+      "description": "One agent processes entire codebase sequentially",
+      "pros": ["simplest", "most coherent"],
+      "cons": ["slowest wall-clock time"]
+    },
+    "hierarchical": {
+      "multiplier": 1.3,
+      "description": "Coordinator agent with specialized workers",
+      "breakdown": {
+        "coordination_planning": 0.10,
+        "worker_reporting": 0.05,
+        "integration_conflict_resolution": 0.15
+      },
+      "pros": ["specialized expertise", "moderate parallelization"],
+      "cons": ["coordination complexity"]
+    },
+    "swarm": {
+      "multiplier": 1.5,
+      "description": "Multiple independent agents on different files/modules",
+      "breakdown": {
+        "duplicate_context_loading": 0.20,
+        "conflict_detection_resolution": 0.20,
+        "cross_agent_coordination": 0.10
+      },
+      "pros": ["fastest wall-clock execution"],
+      "cons": ["highest token consumption", "coordination overhead"]
+    }
+  },
+  "cocomo_parameters": {
+    "base_constant_A": 2.94,
+    "scale_exponent_B": {
+      "small_simple": 1.05,
+      "medium_moderate": 1.12,
+      "large_complex": 1.20,
+      "very_large_complex": 1.26
+    },
+    "person_months_to_hours": 160
+  }
+}

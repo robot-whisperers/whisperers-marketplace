@@ -1,0 +1,79 @@
+{
+  "description": "Language pair difficulty multipliers for modernization estimates",
+  "version": "1.0.0",
+  "pairs": {
+    "python2_to_python3": {
+      "difficulty": 1.2,
+      "notes": "Syntax changes, print statements, unicode handling, division operator"
+    },
+    "python_to_python": {
+      "difficulty": 0.8,
+      "notes": "Version upgrades within same language"
+    },
+    "java8_to_java17": {
+      "difficulty": 1.3,
+      "notes": "Module system, var keyword, records, sealed classes"
+    },
+    "java_to_kotlin": {
+      "difficulty": 1.1,
+      "notes": "Similar JVM paradigm, mostly syntax changes with null safety"
+    },
+    "java_to_scala": {
+      "difficulty": 1.6,
+      "notes": "Different paradigm, functional programming concepts"
+    },
+    "javascript_to_typescript": {
+      "difficulty": 1.2,
+      "notes": "Type annotations, interface definitions, generics"
+    },
+    "javascript_es5_to_es6": {
+      "difficulty": 0.9,
+      "notes": "Mostly additive features, backward compatible"
+    },
+    "ruby_to_ruby": {
+      "difficulty": 0.8,
+      "notes": "Version upgrades, Rails migrations"
+    },
+    "rails_to_node": {
+      "difficulty": 2.0,
+      "notes": "Complete paradigm shift, async patterns, different ecosystem"
+    },
+    "php_to_python": {
+      "difficulty": 1.7,
+      "notes": "Different paradigms, type systems, frameworks"
+    },
+    "csharp_to_csharp": {
+      "difficulty": 0.8,
+      "notes": "Version upgrades within .NET"
+    },
+    "objective_c_to_swift": {
+      "difficulty": 1.8,
+      "notes": "Major paradigm shift, optional handling, modern syntax"
+    },
+    "go_to_rust": {
+      "difficulty": 2.0,
+      "notes": "Ownership model, lifetime annotations, significant learning curve"
+    },
+    "angular_to_react": {
+      "difficulty": 1.5,
+      "notes": "Framework paradigm shift, component models differ"
+    },
+    "vue_to_react": {
+      "difficulty": 1.3,
+      "notes": "Similar component models, different state management"
+    }
+  },
+  "fallback": {
+    "same_language": 0.8,
+    "similar_paradigm": 1.2,
+    "different_paradigm": 1.8,
+    "unknown": 1.5
+  },
+  "paradigm_classifications": {
+    "oop": ["java", "csharp", "cpp", "python", "ruby", "php"],
+    "functional": ["haskell", "scala", "clojure", "erlang", "elixir"],
+    "scripting": ["python", "ruby", "javascript", "php", "perl"],
+    "systems": ["c", "cpp", "rust", "go"],
+    "jvm": ["java", "kotlin", "scala", "clojure"]
+  }
+}
