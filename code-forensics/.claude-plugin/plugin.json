@@ -1,0 +1,8 @@
+{
+"name": "code-forensics",
+"description": "A collection of commands and skills used to perform forensic analysis on codebases.  Inspried by Your Code as a Crime Scene by Adam Tornhill",
+"version": "1.0.0",
+"author": {
+"name": "Michael Stricklen"
+}
+}

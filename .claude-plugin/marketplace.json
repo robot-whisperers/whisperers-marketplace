@@ -8,6 +8,11 @@
   "name": "proven-practices",
   "source": "./proven-practices",
   "description": "Claude skills providing proven software development practices"
+},
+{
+  "name": "code-forensics",
+  "source": "./code-forensics",
+  "description": "Claude skills and commands providing code forensic analysis"
 }
 ]
 }
